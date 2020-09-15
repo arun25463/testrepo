@@ -51,7 +51,7 @@ resource "aws_key_pair" "deployer" {
 
 resource "aws_instance" "passionModel" {
   ami           = "ami-0bcc094591f354be2"
-  instance_type = "t2.micro"
+  instance_type = "t2.medium"
   key_name= aws_key_pair.deployer.key_name
   associate_public_ip_address = true
   # vpc_security_group_ids=""
