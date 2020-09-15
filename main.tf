@@ -51,7 +51,7 @@ resource "aws_key_pair" "deployer" {
 
 resource "aws_instance" "passionModel" {
   ami           = "ami-0bcc094591f354be2"
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   key_name= aws_key_pair.deployer.key_name
   associate_public_ip_address = true
   # vpc_security_group_ids=""
@@ -59,7 +59,7 @@ resource "aws_instance" "passionModel" {
   #iam_instance_profile= aws_iam_role.passion_role.name
   iam_instance_profile= aws_iam_instance_profile.passion_profile.name
   tags = {
-    Name = "ArunK_automated"
+    Name = "ArunK_auto"
     Project = "Passion"
   }
 
