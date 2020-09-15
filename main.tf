@@ -59,7 +59,7 @@ resource "aws_instance" "passionModel" {
   #iam_instance_profile= aws_iam_role.passion_role.name
   iam_instance_profile= aws_iam_instance_profile.passion_profile.name
   tags = {
-    Name = "Arun1"
+    Name = "ArunK_automated"
     Project = "Passion"
   }
 
